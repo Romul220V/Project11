@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mesto</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+<body>
+  <div class="root">
+    <header class="header root__section">
+      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+    </header>
+    <div class="profile root__section">
+      <div class="user-info">
+        <div class="user-info__photo"></div>
+        <div class="user-info__data">
+          <h1 class="user-info__name"></h1>
+          <p class="user-info__job"></p>
+          <button class="user-info__edit">edit</button>
+        </div>
+        <button class="button user-info__button">+</button>
+      </div>
+    </div>
+    <div class="places-list root__section">
+
+      <!-- Пример вёрстки карточки: -->
+<template class ="base-template">
+      <div class="place-card">
+        <div class="place-card__image" >
+          <button class="place-card__delete-icon"></button>
+        </div>
+        <div class="place-card__description">
+          <h3 class="place-card__name">Камчатка</h3>
+          <button class="place-card__like-icon"></button>
+        </div>
+      </div>
+    </template>
+      <!-- конец примера. -->
+
+    </div>
+    <div class="popup popup_form_edit">
+      <div class="popup__content">
+        <img src="./images/close.svg" alt="close button" class="popup__close popup__close_form">
+        <h3 class="popup__title">Новое место</h3>
+        <form class="popup__form" name="new">
+            <input type="text" name="name" class="popup__input popup__input_type_name" placeholder="Название">
+            <span class="error_place">ERROR!</span>
+            <input type="url" name="link" class="popup__input popup__input_type_link-url" placeholder="Ссылка на картинку">
+            <span class="error_link">ERROR!</span>
+            <button type class="button popup__button" name="new_place">+</button>
+        </form>
+      </div>
+    </div>
+    <div class="popup popup_user_edit">
+      <div class="popup__content popup__content_edit">
+        <img src="./images/close.svg" alt="" class="popup__close popup__close_user">
+        <h3 class="popup__title popup__title_edit">Редактировать профиль</h3>
+        <form class="popup__form" name="edit">
+            <input type="text" name="name" class="popup__input popup__input_type_name" value="Jaques Causteau" placeholder="Jaques Causteau">
+            <span class="error_name">ERROR!</span>
+            <input type="text" name="job" class="popup__input popup__input_type_name" value="Sailor, Researcher" placeholder="Sailor, Researcher">
+            <span class="error_job">ERROR!</span>
+            <button type class="button popup__button">Сохранить</button>
+        </form>
+      </div>
+    </div>
+    
+    
+    <div class="popup popup-image">
+      <div class="popup__content_image">
+      <img src="./images/close.svg" alt="close button" class="popup__close popup__close_image">
+        <img src="https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg" alt="" class="big_image">
+       
+        <!-- <img src="./images/arrowRight.svg" alt="next image" class="image__change image__change_next">
+        <img src="./images/arrowLeft.svg" alt="previous image" class="image__change image__change_previous">
+      Пытался сделать кнопки на попапе с картинкой для перелистывания на следующую, но это так, заготовка на будущее.
+      -->
+        
+      </div>
+  </div>
+
+  </div>
+  <script src="API.js"></script>
+  <script src="Card.js"></script>
+  <script src="CardList.js"></script>
+  <script src="Popup.js"></script>
+  <script src="UserInfo.js"></script>
+  <script src="FormValidator.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

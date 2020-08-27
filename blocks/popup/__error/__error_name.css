@@ -1,0 +1,19 @@
+.error_name {
+    display: none;
+    color: red;
+}
+
+.error_job {
+    display: none;
+    color: red;
+}
+
+.error_place {
+    display: none;
+    color: red;
+}
+
+.error_link {
+    display: none;
+    color: red;
+}
